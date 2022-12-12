@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:WpfApp1_text"
         mc:Ignorable="d"
         Title="MainWindow" Height="850" Width="700">
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="MenuItem_Click_3"/>
+        <CommandBinding Command="Save" Executed="MenuItem_Click_4"/>
+        <CommandBinding Command="Stop" Executed="MenuItem_Click_5"/>        
+    </Window.CommandBindings>
     <Grid>       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,10 +19,10 @@
         </Grid.RowDefinitions>
         <Menu Margin="5" Padding="5">
             <MenuItem Header="_Файл">
-                <MenuItem Header="_Открыть" Click="MenuItem_Click_3"/>
-                <MenuItem Header="_Сохранить" Click="MenuItem_Click_4"/>
+                <MenuItem Header="_Открыть" Command="Open"/>
+                <MenuItem Header="_Сохранить" Command="Save"/>
                 <Separator/>
-                <MenuItem Header="_Закрыть" Click="MenuItem_Click_5"/>
+                <MenuItem Header="_Закрыть" Command="Stop"/>
             </MenuItem>           
         </Menu>
         <ToolBarTray Grid.Row="1" Grid.ColumnSpan="2">

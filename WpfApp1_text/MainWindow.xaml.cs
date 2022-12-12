@@ -27,6 +27,7 @@ namespace WpfApp1_text
             InitializeComponent();
         }
 
+
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -51,6 +52,7 @@ namespace WpfApp1_text
         {
             Application.Current.Shutdown();
         }
+
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
