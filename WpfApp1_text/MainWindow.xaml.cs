@@ -56,7 +56,7 @@ namespace WpfApp1_text
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            string fontName = ((sender as ComboBox).SelectedItem as string);
             if (textBox != null)
             {
                 textBox.FontFamily = new FontFamily(fontName);
@@ -65,9 +65,9 @@ namespace WpfApp1_text
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
+            double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem));
             if (textBox != null)
             {
-                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as TextBlock).Text);
                 textBox.FontSize = fontSize;
             }
         }
@@ -114,7 +114,7 @@ namespace WpfApp1_text
             if (textBox != null)
             {
                 textBox.Foreground = Brushes.Black;
-            }           
+            }
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
